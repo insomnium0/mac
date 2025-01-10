@@ -37,19 +37,8 @@ if not intr or not adr:
     print("Usage: python mac.py -i <interface> -m <mac_address>")
     exit(1)
 
+
 # runs the basic shell commands that takes down the interface given, changes the address to whatever you set it to, and then puts it back up.
-
-#  i wuz here :3
-
-import subprocess
-import time
-adr = input("enter mac address to change to: ")
-print("\n")
-intr = input("enter interface to change to: ")
-print("\n")
-
-
-# does the simple shell commands that takes your interface down, changes your mac address, and then puts it back up.
 subprocess.call(["sudo", "ip", "link", "set", "dev" , intr , "down"],)
 subprocess.call(["sudo", "ip", "link", "set", "dev" , intr , "address" , adr])
 subprocess.call(["sudo", "ip", "link", "set", "dev", intr , "up"])
@@ -66,14 +55,6 @@ time.sleep(2)
 print("Would you like to see confirmation to make sure your address has been changed?\n")
 
 # a while loop; basically loops this little section infinitely if anything else other than yes/y or no/n is entered, but it immediately stops the program if either of those are put in.
-
-print ('✅ Changed MAC address for '+ intr + " to " + adr + "!\n")
-
-time.sleep(2)
-
-print("Would you like to see confirmation to make sure your address has been changed?\n")
-
-
 while True:
     choice = input("yes or no? : ").strip().lower()
 
