@@ -37,9 +37,9 @@ parser = optparse.OptionParser()
 # these 2 pieces of code call the parser object, and then calls the method add_option, which adds the option to use shortened args (or full length if you're weird...), and then puts those into the variables address, and interface, respectively.
 parser.add_option("-i","--interface", dest="interface", help="Interface to change the mac address.")
 parser.add_option("-m","--mac", dest="address", help="MAC address to change to.")
-
+# this parses the args, and stores them in options and arguements
 (options, arguments) = parser.parse_args()
-
+# variables for the interface and address arguments, for future use
 intr = options.interface
 adr  = options.address
 
