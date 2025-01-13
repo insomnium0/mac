@@ -1,21 +1,34 @@
-silly little simple cli based mac changer, for now!
-:3
+silly little simple cli based mac changer, for now...
 
 just a little starter project for me to get used to github, and how to use vscode.
-more updates coming in the future; planning on getting familiar with github through this project, along with another potential future repo.
-
-no idea what the second repo is going to be, maybe a network scanner?
-
-at some point in the far, FAR future, i might remake these beginner repos in a compilation of languages (tested on my "yes" repo, with python, C, and lua, to see if i could get start on how that would be done.)
-
-i plan on adding randomization to the mac address at some point, so that you dont have to be bothered to type out such a long string of numbers.
-
-could make a gui for it, with custom scripts to change themes, scripts add your own little functionality, etc. etc. honestly, theres so many possibilities.
+more updates coming in the future; planning on getting familiar with github through this project, along other future repos.
 
 hopefully by the time that the next set of eyes gaze upon this shitty beginner repo, it would prove to be a testament to how much i've grown since.
 
-it is only a matter of time, effort, and consistency,
+anyways, heres how to download this and use it or something
 
-come, would you dare embark on this journey with me?
+# Download
+to download this repo, run
+```
+git clone https://github.com/insomnium0/mac.git
+```
+then you just have to cd into the file, like so
+```
+cd mac
+```
+you are now ready to use it.
+
+# Usage
+to use this tool, the command has to be structured like so
+```
+python mac.py -i <interface> -m <mac_address>
+```
+so for example,
+```
+python mac.py -i wlan0 -m 00:11:22:33:44:55
+```
+make sure the mac address is 6 bytes long, and youre golden!
+
+
 
 
